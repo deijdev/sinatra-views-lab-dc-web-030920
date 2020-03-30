@@ -1,7 +1,6 @@
 class App < Sinatra::Base
 
 	resp = Rack::Response.new
-	# req = Rack::Request.new
 
 	get '/' do
 		erb :index
@@ -24,9 +23,6 @@ class App < Sinatra::Base
 		resp.status = 200 
 		@date = Date.today.strftime("%A, %B %d, %Y")
 		erb :date  
-		# else
-		# resp.status = 400
-		# "Your application is not responding to GET /date. Did you create that route?"
 	end
 end
 
